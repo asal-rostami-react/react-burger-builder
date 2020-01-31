@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Toolbal.css';
+import classes from './Toolbar.css';
 
 const toolbar = (props) => (
 
