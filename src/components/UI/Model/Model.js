@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Model.css';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Backdrop from '../Bachdrop/Backdrop';
 
 class Model extends Component {
