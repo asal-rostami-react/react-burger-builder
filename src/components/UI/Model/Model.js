@@ -4,6 +4,15 @@ import Aux from '../../../hoc/Aux';
 import Backdrop from '../Bachdrop/Backdrop';
 
 class Model extends Component {
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.show !== this.props.show;
+    }
+
+    componentWillUpdate(){
+        console.log('[Model] WillUpdate');
+    }
+
     render() {
         return(
             <Aux>
