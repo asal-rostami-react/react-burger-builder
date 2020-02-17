@@ -8,7 +8,7 @@ import ContactData from '../Checkout/ContactData/ContactData';
 class Checkout extends Component {
     state = {
         ingredients: null,
-        totalPrice: 0 
+        price: 0 
     }
     componentWillMount() {
         const quary = new URLSearchParams(this.props.location.search);
