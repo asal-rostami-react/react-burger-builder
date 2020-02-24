@@ -17,7 +17,6 @@ class BurgerBuilder extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            purchasable: false,
             purchasing: false,
             loading: false,
             error: false
@@ -46,7 +45,8 @@ class BurgerBuilder extends Component {
             .reduce( (sum, el) => {
                 return sum + el;
             }, 0);
-        this.setState({purchasable: sum > 0});
+        // this.setState({purchasable: sum > 0});
+        return sum > 0; 
     }
 
 
@@ -87,17 +87,17 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        
-        const quaryParams = [];
-        for(let i in this.state.ingredients) {
-            quaryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
-        }
-        quaryParams.push('price=' + this.props.price)
-        const quaryString = quaryParams.join('&');
-        this.props.history.push({
-            pathname: '/checkout',
-            search: '?' + quaryString
-        });
+        this.props.history.push('/checkout');
+        // const quaryParams = [];
+        // for(let i in this.state.ingredients) {
+        //     quaryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+        // }
+        // quaryParams.push('price=' + this.props.price)
+        // const quaryString = quaryParams.join('&');
+        // this.props.history.push({
+        //     pathname: '/checkout',
+        //     search: '?' + quaryString
+        // });
     }
 
     purchaseHandler = () => {
@@ -129,7 +129,7 @@ class BurgerBuilder extends Component {
                         ingredientAdded={this.props.onIngredientsAdded}
                         ingredientRemoved={this.props.onIngredientsRemoved}
                         disabled={disabledInfo}
-                        purchasable={this.state.purchasable}
+                        purchasable={this.updatePurchaseState(this.props.ings)}
                         ordered={this.purchaseHandler}
                         price={this.props.price} />
                 </Aux>
