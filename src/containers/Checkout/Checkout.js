@@ -47,7 +47,7 @@ class Checkout extends Component {
                         // render={(props) => (<ContactData ingredients={this.props.ingredients} 
                         // price={this.props.price} 
                         // {...props}
-                        component= {ContactData}/>)}/>
+                        component= {ContactData}/>
                 </div>
                
             );
