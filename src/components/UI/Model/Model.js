@@ -10,7 +10,7 @@ class Model extends Component {
     }
 
     componentWillUpdate(){
-        console.log('[Model] WillUpdate');
+        // console.log('[Model] WillUpdate');
     }
 
     render() {

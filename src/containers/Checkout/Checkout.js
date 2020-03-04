@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import CheckoutSummary from '../../components/Order/CheckoutSummay/CheckoutSummary';
 import { Route, Redirect } from 'react-router-dom'
 import ContactData from '../Checkout/ContactData/ContactData';
-import * as actions from '../../store/actions/index';
+
 
 
 
