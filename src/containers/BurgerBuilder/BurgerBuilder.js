@@ -13,7 +13,7 @@ import * as actions from '../../store/actions/index';
 import thunk from 'redux-thunk';
 
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
 
     constructor(props) {
         super(props);
